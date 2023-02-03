@@ -11,6 +11,15 @@ namespace csharptreino
         public int numero_agencia;
         public string conta;
         public string titular;
-        public double saldo;
+        public double saldo = 100;
+    }
+    public void depositar(double valor)
+    {
+        this.saldo += valor;
+    }
+
+    public void sacar(double valor)
+    {
+        this.saldo -= valor;
     }
 }

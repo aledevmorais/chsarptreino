@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace csharptreino0102
 {
-    internal class roupa
+    public class roupa
     {
         public int codigo;
         public string nome;
         public string fabricante;
         public double valor;
+        public string RetornaFabricante()
+        {
+            return fabricante;
+        }
     }
+        
 }
