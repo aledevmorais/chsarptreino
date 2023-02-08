@@ -12,7 +12,8 @@ namespace csharptreino.contas
     {
         public int numero_agencia;
         public string conta;
-        public double saldo = 100;
+        private double saldo = 400;
+        //quando definimos (private) o campo só é visivel dentro da propria classe
         //classe tem que ter o principio da responsabilidade
         //estar completa para fazer o que tem que fazer
         public cliente titular;
@@ -35,6 +36,35 @@ namespace csharptreino.contas
             }
 
             saldo -= valor;
+        }
+        public bool transferir(double valor, contaCorrente destino)
+        {
+            if(saldo < valor)
+            {
+                return false;
+            }
+            else
+            {
+                sacar(valor);
+                destino.depositar(valor);
+                return true;
+
+            }
+        }
+        public void SetSaldo(double valor)
+        {
+            if( valor < 0)
+            {
+                return;
+            }
+            else
+            {
+                this.saldo = valor;
+            }
+        }
+        public double GetSaldo()
+        {
+            return this.saldo;
         }
     }
 }

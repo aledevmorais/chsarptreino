@@ -35,11 +35,15 @@ contaCorrente contaPadrao2 = new contaCorrente();
 contaPadrao2.titular = contaPadrao;
 contaPadrao2.conta = "1010-x";
 contaPadrao2.numero_agencia = 15;
-contaPadrao2.saldo = 100;
+contaPadrao2.SetSaldo(100);
+//a partir da mudanca para private eu não consigo atribuir valor a saldo fora classe
 
 Console.WriteLine("Titular   : " + contaPadrao2.titular.nome);
 Console.WriteLine("CPF       : " + contaPadrao2.titular.cpf);
 Console.WriteLine("Profissão : " + contaPadrao2.titular.profissão);
 Console.WriteLine("Conta N.  : " + contaPadrao2.conta);
-Console.WriteLine("saldo     : " + contaPadrao2.saldo);
 Console.WriteLine("Agencia N.: " + contaPadrao2.numero_agencia);
+
+
+
+
