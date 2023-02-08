@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using csharptreino.titular;
+//automaticamente o VS adicionou o nomespace para ser utilizado nesta classe
 
-namespace csharptreino
+namespace csharptreino.contas
 {
     public class contaCorrente
     {
         public int numero_agencia;
         public string conta;
-        public string titular;
         public double saldo = 100;
+        //classe tem que ter o principio da responsabilidade
+        //estar completa para fazer o que tem que fazer
+        public cliente titular;
+
         public void depositar(double valor)
         {
-            this.saldo += valor;
+            saldo += valor;
         }
 
         public bool sacar(double valor)
         {
-            if(valor <= saldo)
+            if (valor <= saldo)
             {
                 saldo -= valor;
                 return true;
@@ -29,7 +34,7 @@ namespace csharptreino
                 return false;
             }
 
-            this.saldo -= valor;
+            saldo -= valor;
         }
     }
 }
