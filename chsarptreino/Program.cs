@@ -24,26 +24,30 @@ using csharptreino.titular;
 // return false pois cada objeto na memoria tem endereço unicos 
 // a comparação é com endereço de memoria e não conteudo do objeto
 
-cliente contaPadrao = new cliente();
+//cliente contaPadrao = new cliente();
 
-contaPadrao.nome = "Alessandro";
-contaPadrao.cpf = "20030040056";
-contaPadrao.profissão = "analista";
+//contaPadrao.nome = "Alessandro";
+//contaPadrao.cpf = "20030040056";
+//contaPadrao.profissão = "analista";
 
-contaCorrente contaPadrao2 = new contaCorrente();
+//contaCorrente contaPadrao2 = new contaCorrente();
 
-contaPadrao2.titular = contaPadrao;
-contaPadrao2.conta = "1010-x";
-contaPadrao2.numero_agencia = 15;
-contaPadrao2.SetSaldo(100);
-//a partir da mudanca para private eu não consigo atribuir valor a saldo fora classe
+//contaPadrao2.titular = contaPadrao;
+//contaPadrao2.conta = "1010-x";
+//contaPadrao2.numero_agencia = 15;
+//contaPadrao2.SetSaldo(100);
+////a partir da mudanca para private eu não consigo atribuir valor a saldo fora classe
 
-Console.WriteLine("Titular   : " + contaPadrao2.titular.nome);
-Console.WriteLine("CPF       : " + contaPadrao2.titular.cpf);
-Console.WriteLine("Profissão : " + contaPadrao2.titular.profissão);
-Console.WriteLine("Conta N.  : " + contaPadrao2.conta);
-Console.WriteLine("Agencia N.: " + contaPadrao2.numero_agencia);
+//Console.WriteLine("Titular   : " + contaPadrao2.titular.nome);
+//Console.WriteLine("CPF       : " + contaPadrao2.titular.cpf);
+//Console.WriteLine("Profissão : " + contaPadrao2.titular.profissão);
+//Console.WriteLine("Conta N.  : " + contaPadrao2.conta);
+//Console.WriteLine("Agencia N.: " + contaPadrao2.numero_agencia);
 
+contaCorrente conta3 = new contaCorrente();
+conta3.Numero_agencia = 18;
+conta3.Conta = "1011-H";
 
-
+Console.WriteLine("o numero da agencia é : " + conta3.Numero_agencia);
+Console.WriteLine("o numero da conta é : " +conta3.Conta);
 

@@ -11,7 +11,11 @@ namespace csharptreino.contas
     public class contaCorrente
     {   
         private int numero_agencia;
-        private string conta;
+        //private string conta;
+        public string Conta
+        {
+            get; set;
+        }
         private double saldo = 100;
         //quando definimos (private) o campo só é visivel dentro da propria classe
         //classe tem que ter o principio da responsabilidade
