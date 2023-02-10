@@ -9,14 +9,22 @@ using csharptreino.titular;
 namespace csharptreino.contas
 {
     public class contaCorrente
-    {
-        public int numero_agencia;
-        public string conta;
-        private double saldo = 400;
+    {   
+        private int numero_agencia;
+        private string conta;
+        private double saldo = 100;
         //quando definimos (private) o campo só é visivel dentro da propria classe
         //classe tem que ter o principio da responsabilidade
         //estar completa para fazer o que tem que fazer
-        public cliente titular;
+        public int Numero_agencia
+        {
+            get { return this.numero_agencia; }
+            set { this.numero_agencia= value; }
+            //quando eu chamo set eu acesso variavel//
+            //criamos uma propriedade que é publica "Numero_agencia" para manipular o campo "numero_agencia"
+            //como a propriedade tem scopo {} nós podemos manipular por funções
+        }
+        private cliente titular;
 
         public void depositar(double valor)
         {
