@@ -44,10 +44,21 @@ using csharptreino.titular;
 //Console.WriteLine("Conta N.  : " + contaPadrao2.conta);
 //Console.WriteLine("Agencia N.: " + contaPadrao2.numero_agencia);
 
-contaCorrente conta3 = new contaCorrente();
-conta3.Numero_agencia = 18;
-conta3.Conta = "1011-H";
+//contaCorrente conta3 = new contaCorrente();
+//conta3.Numero_agencia = 18;
+//conta3.Conta = "1011-H";
 
-Console.WriteLine("o numero da agencia é : " + conta3.Numero_agencia);
-Console.WriteLine("o numero da conta é : " +conta3.Conta);
+//Console.WriteLine("o numero da agencia é : " + conta3.Numero_agencia);
+//Console.WriteLine("o numero da conta é : " +conta3.Conta);
+//internamente o compilador do c# vai  criar em tempo de execução uma variavel 
+//vai atribuir o get e o set "propriedade"
+//Tenho compôs privados sendo acessos por métodos públicos ou propriedades públicas e autoimplementadas
+
+contaCorrente conta4 = new contaCorrente();
+conta4.SetSaldo(500);
+conta4.Numero_agencia = 18;
+conta4.Titular = new cliente();
+
+Console.WriteLine(conta4.GetSaldo());
+Console.WriteLine(conta4.Numero_agencia);
 

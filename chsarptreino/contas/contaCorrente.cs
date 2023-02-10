@@ -29,8 +29,9 @@ namespace csharptreino.contas
             
         }
         public string Conta { get; set; }
-        private cliente titular;
+        
         private double saldo = 100;
+        public cliente Titular { get; set; }
         public void depositar(double valor)
         {
             saldo += valor;
@@ -47,8 +48,6 @@ namespace csharptreino.contas
             {
                 return false;
             }
-
-            saldo -= valor;
         }
         public bool transferir(double valor, contaCorrente destino)
         {
