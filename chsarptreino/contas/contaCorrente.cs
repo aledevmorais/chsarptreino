@@ -9,7 +9,8 @@ using csharptreino.titular;
 namespace csharptreino.contas
 {
     public class contaCorrente
-    {   
+    {
+        public static int TotalDeContasCriadas { get; set; }
         private int numero_agencia;
         //private string conta;
         //quando definimos (private) o campo só é visivel dentro da propria classe
@@ -18,7 +19,7 @@ namespace csharptreino.contas
         public int Numero_agencia
         {
             get { return this.numero_agencia; }
-            set
+            private set
             {
                 if(value > 0)
                 {
@@ -77,6 +78,15 @@ namespace csharptreino.contas
         public double GetSaldo()
         {
             return this.saldo;
+        }
+        public contaCorrente(int numero_agencia, string numero_conta)
+        {
+            this.Numero_agencia= numero_agencia;
+            this.Conta = numero_conta;
+            TotalDeContasCriadas++;
+            //quando crio um objeto no metodo construtor ele incrementa e executa as funções desse objeto
+            //o this faz refencia a instancia do objeto e por isso deve ser removido
+            //totalDeContasCriadas é uma propriedade da classe e não do objeto
         }
     }
 }

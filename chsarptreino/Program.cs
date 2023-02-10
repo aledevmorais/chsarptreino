@@ -54,11 +54,21 @@ using csharptreino.titular;
 //vai atribuir o get e o set "propriedade"
 //Tenho compôs privados sendo acessos por métodos públicos ou propriedades públicas e autoimplementadas
 
-contaCorrente conta4 = new contaCorrente();
-conta4.SetSaldo(500);
-conta4.Numero_agencia = 18;
-conta4.Titular = new cliente();
+//contaCorrente conta4 = new contaCorrente(18, "1010-X");
+//conta4.SetSaldo(500);
+//conta4.Titular = new cliente();
 
-Console.WriteLine(conta4.GetSaldo());
-Console.WriteLine(conta4.Numero_agencia);
+//Console.WriteLine(conta4.GetSaldo());
+//Console.WriteLine(conta4.Numero_agencia);
+
+contaCorrente conta5 = new contaCorrente(283, "1234-X");
+Console.WriteLine(contaCorrente.TotalDeContasCriadas);
+// para acessar uma propriedade estatica deve chamar a classe contaCorrente
+
+contaCorrente conta6 = new contaCorrente(284, "9874-Z");
+Console.WriteLine(contaCorrente.TotalDeContasCriadas);
+
+contaCorrente conta7 = new contaCorrente(285, "9899-Y");
+Console.WriteLine(contaCorrente.TotalDeContasCriadas);
+
 
